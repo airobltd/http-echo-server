@@ -53,7 +53,7 @@ server.on('connection', function (c) {
 })
 
 server.on('listening', function () {
-  var port = server.address().port
+  var port = 3000
   console.log('[server] event: listening (port: %d)', port)
 })
 
