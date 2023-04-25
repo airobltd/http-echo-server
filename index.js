@@ -61,7 +61,7 @@ server.on('error', function (err) {
   console.log('[server] event: error (msg: %s)', err.message)
 })
 
-var port = process.argv[2] || process.env.PORT
+var port = 3000
 
 if (port) {
   server.listen(port)
