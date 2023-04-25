@@ -1,16 +1,12 @@
-const net = require("net");
-const server = net.createServer((socket)=>{
-    socket.write("Hello From Server!")
-    socket.on("data",(data)=>{
-        console.log(data.toString())
-    });
-    socket.on("close",()=>{
-        console.log("Connection closed.!!!")
-    })
+var express = require('express');
+var app     = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
 });
-
-const PORT = process.env.PORT || 4000
-
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`)
-})
