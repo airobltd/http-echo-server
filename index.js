@@ -8,4 +8,9 @@ const server = net.createServer((socket)=>{
         console.log("Connection closed.!!!")
     })
 });
-server.listen(8080);
+
+const PORT = process.env.PORT || 4000
+
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`)
+})
