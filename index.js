@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
-var getPort = require('get-port')
+var getPort = 9712
 var server = require('net').createServer()
 
 var cid = 0
