@@ -1,44 +1,20 @@
 {
-  "name": "http-echo-server",
-  "version": "2.1.1",
-  "description": "A simple HTTP echo server",
-  "main": "index.js",
-  "bin": "index.js",
+  "name": "Socket-Server-Template",
+  "version": "1.0.0",
+  "description": "Web Socket Node Server Example",
+  "main": "main.js",
+  "author": "Torin Blankensmith",
+  "license": "MIT",
+  "private": false,
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./main.js",
+    "dev": "NODE_ENV=development PORT=5000 node ./main.js"
   },
   "engines": {
-  "node": "5.0.0",
-  "npm": "4.6.1"
+    "node": ">=8.9.0"
   },
-  "author": "Thomas Watson Steen <w@tson.dk>",
-  "license": "MIT",
   "dependencies": {
-    "get-port": "^4.0.0"
-  },
-  "devDependencies": {
-    "standard": "^12.0.1"
-  },
-  "preferGlobal": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/watson/http-echo-server.git"
-  },
-  "bugs": {
-    "url": "https://github.com/watson/http-echo-server/issues"
-  },
-  "homepage": "https://github.com/watson/http-echo-server",
-  "keywords": [
-    "http",
-    "tcp",
-    "echo",
-    "server",
-    "debug",
-    "debugger",
-    "test"
-  ],
-  "coordinates": [
-    55.778264,
-    12.593148
-  ]
+    "express": "^4.17.1",
+    "ws": "^8.2.2"
+  }
 }
